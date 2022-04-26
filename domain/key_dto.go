@@ -22,6 +22,6 @@ func getID() string {
 	return result
 }
 
-type Results struct {
-	Uniq_keys []string `json:"keys"`
+type UniqKeys struct {
+	Keys []string `json:"keys"`
 }
