@@ -1,7 +1,9 @@
 package keyscontroller
 
 import (
+	"fmt"
 	"net/http"
+	keymodels "test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/domain"
 	"test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/services/keyservices"
 
 	"github.com/gin-gonic/gin"
@@ -21,5 +23,8 @@ func GetKeys(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, err)
 		return
 	}
-	c.JSON(http.StatusOK, results)
+	var keys keymodels.Results
+	keys.Uniq_keys = results
+	fmt.Printf("%T\n", keys.Uniq_keys)
+	c.JSON(http.StatusOK, keys)
 }

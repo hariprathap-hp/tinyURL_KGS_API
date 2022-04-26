@@ -21,3 +21,7 @@ func getID() string {
 	result := id.Base36()[3:]
 	return result
 }
+
+type Results struct {
+	Uniq_keys []string `json:"keys"`
+}
