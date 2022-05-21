@@ -1,12 +1,12 @@
 package keyservices
 
 import (
-	keymodels "test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/domain"
-	"test3/hariprathap-hp/system_design/utils_repo/errors"
+	"github.com/hariprathap-hp/tinyURL_KGS_API/domain"
+	"github.com/hariprathap-hp/utils_repo/errors"
 )
 
 func PopulateKeys() *errors.RestErr {
-	var key keymodels.Key
+	var key domain.Key
 	if err := key.Populate(true, ""); err != nil {
 		return err
 	}
@@ -14,7 +14,7 @@ func PopulateKeys() *errors.RestErr {
 }
 
 func GetKeys() ([]string, *errors.RestErr) {
-	var key keymodels.Key
+	var key domain.Key
 	results, err := key.Get(50)
 	if err != nil {
 		return nil, err

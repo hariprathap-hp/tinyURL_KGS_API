@@ -1,11 +1,11 @@
-package keyscontroller
+package keys
 
 import (
 	"net/http"
-	keymodels "test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/domain"
-	"test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/services/keyservices"
 
 	"github.com/gin-gonic/gin"
+	"github.com/hariprathap-hp/tinyURL_KGS_API/domain"
+	"github.com/hariprathap-hp/tinyURL_KGS_API/services/keyservices"
 )
 
 func PopulateKeys(c *gin.Context) {
@@ -22,7 +22,7 @@ func GetKeys(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, err)
 		return
 	}
-	keys := keymodels.UniqKeys{
+	keys := domain.UniqKeys{
 		Keys: results,
 	}
 	c.JSON(http.StatusOK, keys)

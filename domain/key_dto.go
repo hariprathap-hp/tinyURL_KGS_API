@@ -1,4 +1,4 @@
-package keymodels
+package domain
 
 import (
 	"fmt"

@@ -1,12 +1,12 @@
 package application
 
 import (
-	keyscontroller "test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/controller/keys"
-	pingcontroller "test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/controller/ping"
+	"github.com/hariprathap-hp/tinyURL_KGS_API/controller/keys"
+	"github.com/hariprathap-hp/tinyURL_KGS_API/controller/ping"
 )
 
 func mapUrls() {
-	router.GET("/ping", pingcontroller.Ping)
-	router.GET("/populate", keyscontroller.PopulateKeys)
-	router.GET("/getKeys", keyscontroller.GetKeys)
+	router.GET("/ping", ping.Ping)
+	router.GET("/populate", keys.PopulateKeys)
+	router.GET("/getKeys", keys.GetKeys)
 }

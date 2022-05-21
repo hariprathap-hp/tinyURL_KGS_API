@@ -1,6 +1,6 @@
 package main
 
-import "test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/application"
+import "github.com/hariprathap-hp/tinyURL_KGS_API/application"
 
 func main() {
 	application.StartApplication()

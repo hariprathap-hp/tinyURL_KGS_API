@@ -1,11 +1,11 @@
-package keymodels
+package domain
 
 import (
 	"fmt"
-	"test3/hariprathap-hp/DesignTinyURL/tinyURL_KGS_API/dataSource/cassandra"
-	"test3/hariprathap-hp/system_design/utils_repo/errors"
 
 	"github.com/gocql/gocql"
+	"github.com/hariprathap-hp/tinyURL_KGS_API/dataSource/cassandra"
+	"github.com/hariprathap-hp/utils_repo/errors"
 )
 
 const (
